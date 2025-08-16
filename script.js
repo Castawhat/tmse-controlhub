@@ -6,7 +6,11 @@ const sounds = [
   },
   {
     name: "Theme Song",
-    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/drum_roll.mp3"
+    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/title_theme.mp3"
+  },
+    {
+    name: "Attention",
+    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/attention.mp3"
   },
   // Add more sounds like this:
   // { name: "Buzzer", file: "https://github.com/USERNAME/REPO/raw/refs/heads/main/buzzer.mp3" }

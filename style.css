@@ -4,6 +4,10 @@ body {
   color: white;
   margin: 0;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Footer stays at bottom */
 }
 
 header {
@@ -18,19 +22,28 @@ h1 {
 }
 
 main {
-  margin-top: 3em;
+  flex: 1; /* pushes footer down */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* prevents stretching buttons */
+  gap: 1em;
+  padding: 3em 0;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .task-button {
   background-color: red;
   color: white;
-  font-size: 1.5rem;
-  padding: 1em 2em;
+  font-size: 1.2rem;
+  padding: 1em 1.5em;
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px #000;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
+  min-width: 150px;
 }
 
 .task-button:hover {
@@ -39,7 +52,26 @@ main {
 }
 
 footer {
-  margin-top: 4em;
   font-size: 0.8rem;
   color: #ccc;
+  background-color: rgba(0,0,0,0.85);
+  padding: 0.5em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .task-button {
+    font-size: 1rem;
+    padding: 0.8em 1.2em;
+    min-width: 120px;
+  }
+
+  main {
+    padding: 2em 0;
+    gap: 0.8em;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }
