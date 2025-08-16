@@ -22,16 +22,21 @@ h1 {
 }
 
 main {
-  flex: 1; /* pushes footer down */
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start; /* prevents stretching buttons */
-  gap: 1em;
-  padding: 3em 0;
-  max-width: 900px;
-  margin: 0 auto;
+  flex-direction: column; /* stack sections vertically */
+  justify-content: center; /* center content vertically */
+  align-items: center;     /* center horizontally */
+  gap: 4em;                /* space between sections */
+  padding: 2em;
 }
+
+section {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
 
 .task-button {
   background-color: red;
@@ -74,4 +79,10 @@ footer {
   h1 {
     font-size: 1.5rem;
   }
+}
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center buttons */
+  gap: 1.5em;             /* bigger gap for vertical breathing room */
 }

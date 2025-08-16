@@ -1,28 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taskmaster Scouts Soundboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taskmaster Scouts Control Panel</title>
   
-  <!-- Google Fonts: ABeeZee -->
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>🎯 Taskmaster Scouts Soundboard</h1>
+    <h1>Taskmaster (Scouts Edition) Control Panel</h1>
   </header>
 
-  <main id="soundboard">
-    <!-- Buttons will be generated here -->
+  <main>
+    <section>
+      <h2>Welcome!</h2>
+      <p>Use this control panel to control your Taskmaster (Scouts Edition) event.</p>
+    </section>
+
+   <section>
+  <h2>Quick Links</h2>
+  <div class="buttons-container">
+    <a href="soundboard.html" class="task-button">Go to Soundboard</a>
+  </div>
+</section>
+
   </main>
 
   <footer>
-    <p>Taskmaster (Scouts Edition)</p>
+    <p>Josh P, Taskmaster (Scouts Edition), 2025</p>
   </footer>
 
-  <script src="script.js"></script>
+<script>
+  // Simple password protection (not secure for sensitive data)
+  const PASSWORD = "TMRWT325"; // Change this to your desired password
+  const STORAGE_KEY = "tm_scouts_authenticated";
+
+  function showContent() {
+    document.body.style.display = '';
+  }
+
+  function hideContent() {
+    document.body.style.display = 'none';
+  }
+
+  // Check if already authenticated in this session
+  if (sessionStorage.getItem(STORAGE_KEY) === "true") {
+    showContent();
+  } else {
+    hideContent();
+    let attempts = 0;
+    while (attempts < 3) {
+      const input = prompt("Enter the password to access this site:");
+      if (input === PASSWORD) {
+        sessionStorage.setItem(STORAGE_KEY, "true");
+        showContent();
+        break;
+      } else {
+        attempts++;
+        alert("Incorrect password. Try again.");
+      }
+    }
+    if (attempts === 3) {
+      alert("Too many incorrect attempts. Reload the page to try again.");
+      // Optionally, redirect or keep content hidden
+    }
+  }
+</script>
 </body>
 </html>
