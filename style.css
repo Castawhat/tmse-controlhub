@@ -86,3 +86,19 @@ footer {
   justify-content: center; /* center buttons */
   gap: 1.5em;             /* bigger gap for vertical breathing room */
 }
+/* ...existing code... */
+.soundboard-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: stretch;
+}
+
+.soundboard-buttons .task-button {
+  flex: 1 1 200px; /* Grow, shrink, min width */
+  min-width: 150px;
+  max-width: 100%;
+  box-sizing: border-box;
+  width: 100%;
+}
+/* ...existing code... */
