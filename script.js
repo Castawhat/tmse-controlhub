@@ -40,6 +40,26 @@ const sounds = [
     name: "A Few Moments Later",
     file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/afew.mp3"
   },
+  {
+    name: "Transitional 7",
+    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrad7.mp3"
+  },
+    {
+    name: "Transitional 3",
+    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrans3.mp3"
+  },
+    {
+    name: "Transitional 3",
+    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrans3.mp3"
+  },
+    {
+    name: "Transitional 4",
+    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrans4.mp3"
+  },
+    {
+    name: "Transitional 1",
+    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrans1.mp3"
+  },
   // Add more sounds like this:
   // { name: "Buzzer", file: "https://github.com/USERNAME/REPO/raw/refs/heads/main/buzzer.mp3" }
 ];

@@ -53,7 +53,7 @@
     hideContent();
     let attempts = 0;
     while (attempts < 3) {
-      const input = prompt("Enter the password to access this site:");
+      const input = prompt("Enter the password to access the portal:");
       if (input === PASSWORD) {
         sessionStorage.setItem(STORAGE_KEY, "true");
         showContent();
