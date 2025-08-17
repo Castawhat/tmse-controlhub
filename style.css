@@ -95,15 +95,15 @@ footer {
 .soundboard-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: stretch;
+  gap: 1.5rem;
+  justify-content: center; /* center instead of stretch */
 }
 
 .soundboard-buttons .task-button {
-  flex: 1 1 200px; /* Grow, shrink, min width */
+  flex: 0 1 200px;   /* fixed-ish width, allows wrapping */
   min-width: 150px;
-  max-width: 100%;
-  box-sizing: border-box;
-  width: 100%;
+  max-width: 220px;
+  width: auto;       /* don’t force full width */
 }
+
 /* ...existing code... */
