@@ -93,17 +93,33 @@ footer {
 }
 /* ...existing code... */
 .soundboard-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center; /* center instead of stretch */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  justify-items: center;
 }
 
 .soundboard-buttons .task-button {
-  flex: 0 1 200px;   /* fixed-ish width, allows wrapping */
-  min-width: 150px;
-  max-width: 220px;
-  width: auto;       /* don’t force full width */
+  background-color: red;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+
+  /* Square tile magic */
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keeps them perfectly square */
+  max-width: 160px;    /* Prevents giant tiles on desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* ...existing code... */
+.soundboard-buttons .task-button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
