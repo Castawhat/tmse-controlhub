@@ -93,10 +93,10 @@ footer {
 }
 .soundboard-buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 1rem;
   width: 100%;
-  max-width: 900px; /* keeps it centered and neat */
+  max-width: 1000px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -111,17 +111,32 @@ footer {
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
 
-  /* square tiles */
-  aspect-ratio: 1 / 1;
+  /* rectangular instead of square */
+  padding: 1em 1.5em;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: auto;
   text-align: center;
 }
 
-.soundboard-buttons .task-button:hover {
-  background-color: darkred;
-  transform: scale(1.05);
+/* --- Force at least 2 columns on small screens --- */
+@media (max-width: 600px) {
+  .soundboard-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+/* --- 3 columns on tablets --- */
+@media (min-width: 601px) and (max-width: 900px) {
+  .soundboard-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- 4+ columns on desktop --- */
+@media (min-width: 901px) {
+  .soundboard-buttons {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
 
