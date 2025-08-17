@@ -91,12 +91,14 @@ footer {
   flex: 1 1 200px;
   max-width: 220px;
 }
-/* ...existing code... */
 .soundboard-buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 1rem;
-  justify-items: center;
+  width: 100%;
+  max-width: 900px; /* keeps it centered and neat */
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .soundboard-buttons .task-button {
@@ -109,10 +111,9 @@ footer {
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
 
-  /* Square tile magic */
+  /* square tiles */
+  aspect-ratio: 1 / 1;
   width: 100%;
-  aspect-ratio: 1 / 1; /* Keeps them perfectly square */
-  max-width: 160px;    /* Prevents giant tiles on desktop */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,3 +124,4 @@ footer {
   background-color: darkred;
   transform: scale(1.05);
 }
+
