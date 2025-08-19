@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <h1>🎯 Taskmaster (Scouts Edition) Control Panel</h1>
+    <h1>Taskmaster (Scouts Edition) Control Panel</h1>
   </header>
 
   <main>
@@ -24,6 +24,7 @@
   <div class="buttons-container">
     <a href="soundboard.html" class="task-button">Soundboard</a>
      <a href="Contestants.html" class="task-button">Contestants</a>
+     <a href="cameras.html" class="task-button">Camera Guide</a>
   </div>
 </section>
 
@@ -53,7 +54,7 @@
     hideContent();
     let attempts = 0;
     while (attempts < 3) {
-      const input = prompt("Enter the password to access the portal:");
+      const input = prompt("Hi! Please enter the password to access the portal. You have " + (3 - attempts) + " attempts left. If you do not know the password, please ask the organiser. Once you enter the password, you will not be asked again until you close the browser/tab or clear your session storage.");
       if (input === PASSWORD) {
         sessionStorage.setItem(STORAGE_KEY, "true");
         showContent();
