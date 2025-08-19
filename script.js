@@ -40,7 +40,6 @@ const sounds = [
     name: "A Few Moments Later",
     file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/afew.mp3"
   },
-  {
     {
     name: "Vine Boom",
     file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/oom.mp3"
