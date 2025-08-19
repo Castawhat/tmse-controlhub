@@ -54,7 +54,7 @@
     hideContent();
     let attempts = 0;
     while (attempts < 3) {
-      const input = prompt("Hello There! You must be here for controling Taskmaster (Scouts Edition) event. Please enter the password to access the portal. You have " + (3 - attempts) + " attempts left. If you do not know the password, please ask the organiser. Once you enter the password, you will not be asked again until you close the browser/tab or clear your session storage.");
+      const input = prompt("Hello There! You must be here for controling a Taskmaster (Scouts Edition) event. Please enter the password to access the portal. You have " + (3 - attempts) + " attempts left. If you do not know the password, please ask the organiser. Once you enter the password, you will not be asked again until you close the browser/tab or clear your session storage.");
       if (input === PASSWORD) {
         sessionStorage.setItem(STORAGE_KEY, "true");
         showContent();
