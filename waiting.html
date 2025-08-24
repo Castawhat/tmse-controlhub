@@ -5,6 +5,44 @@
   <title>I’ll Wait</title>
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"> <!-- your CSS file -->
+  <style>
+    body {
+      font-family: 'ABeeZee', sans-serif;
+      background: #1a1a1a;
+      color: white;
+      margin: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #timer {
+      font-size: 6rem;   /* make timer much bigger */
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
+
+    .buttons-container {
+      margin-top: 2em;
+    }
+
+    .task-button {
+      padding: 0.6em 1.2em;
+      font-size: 1.2rem;
+      margin: 0.5em;
+      border: none;
+      border-radius: 8px;
+      background: #ff3333;
+      color: white;
+      cursor: pointer;
+    }
+
+    .task-button:hover {
+      background: #cc2929;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,9 +52,9 @@
   <main>
     <section>
       <h2>Time Wasted:</h2>
-      <div id="timer" style="font-size:2rem; font-weight:bold;">0s</div>
+      <div id="timer">0s</div>
 
-      <div class="buttons-container" style="margin-top:2em;">
+      <div class="buttons-container">
         <button id="startStop" class="task-button">Start</button>
         <button id="clear" class="task-button">Clear</button>
       </div>
