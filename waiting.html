@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I’ll Wait</title>
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- your CSS file -->
+</head>
+<body>
+  <header>
+    <h1>I’ll wait...</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Timer</h2>
+      <div id="timer" style="font-size:2rem; font-weight:bold;">0s</div>
+
+      <div class="buttons-container" style="margin-top:2em;">
+        <button id="startStop" class="task-button">Start</button>
+        <button id="clear" class="task-button">Clear</button>
+      </div>
+      <p style="font-size:0.9rem; color:#ccc; margin-top:1em;">
+        (Press <b>Space</b> to Start/Stop)
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Still waiting…</p>
+  </footer>
+
+  <script>
+    let seconds = 0;
+    let timerInterval = null;
+    const timerElement = document.getElementById("timer");
+    const startStopButton = document.getElementById("startStop");
+    const clearButton = document.getElementById("clear");
+
+    function updateTimer() {
+      seconds++;
+      let mins = Math.floor(seconds / 60);
+      let secs = seconds % 60;
+      timerElement.textContent =
+        (mins > 0 ? mins + "m " : "") + secs + "s";
+    }
+
+    function startTimer() {
+      if (!timerInterval) {
+        timerInterval = setInterval(updateTimer, 1000);
+        startStopButton.textContent = "Stop";
+      }
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      startStopButton.textContent = "Start";
+    }
+
+    function toggleTimer() {
+      if (timerInterval) {
+        stopTimer();
+      } else {
+        startTimer();
+      }
+    }
+
+    function clearTimer() {
+      stopTimer();
+      seconds = 0;
+      timerElement.textContent = "0s";
+    }
+
+    // Button events
+    startStopButton.addEventListener("click", toggleTimer);
+    clearButton.addEventListener("click", clearTimer);
+
+    // Spacebar toggles timer
+    document.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        e.preventDefault(); // stop page from scrolling
+        toggleTimer();
+      }
+    });
+  </script>
+</body>
+</html>
