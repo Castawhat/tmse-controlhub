@@ -33,7 +33,7 @@ const sounds = [
     file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/notif.mp3"
   },
   {
-    name: "(Josh) Dun",
+    name: "Dun Dun Dun",
     file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/joshdun.mp3"
   },
   {
@@ -48,9 +48,9 @@ const sounds = [
     name: "Record Scratch",
     file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/what.mp3"
   },
-  {
-    name: "Transitional 7",
-    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrad7.mp3"
+      {
+    name: "Transitional 1",
+    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrans1.mp3"
   },
     {
     name: "Transitional 3",
@@ -61,10 +61,11 @@ const sounds = [
     name: "Transitional 4",
     file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrans4.mp3"
   },
-    {
-    name: "Transitional 1",
-    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrans1.mp3"
+  {
+    name: "Transitional 7",
+    file: "https://github.com/Castawhat/taskmasterscouts-soundboard/raw/refs/heads/main/tmtrad7.mp3"
   },
+
   
   // Add more sounds like this:
   // { name: "Buzzer", file: "https://github.com/USERNAME/REPO/raw/refs/heads/main/buzzer.mp3" }
